@@ -20,7 +20,7 @@ while Players.LocalPlayer == nil do
 	Players:GetPropertyChangedSignal('LocalPlayer'):wait()
 end
 
-if Players.LocalPlayer.Character then return end
+if Players.LocalPlayer.Character then print('returning') return end
 
 Players.LocalPlayer:WaitForChild("PlayerScripts"):WaitForChild("Check").Disabled = true
 ReplicatedStorage:WaitForChild("DataTransfer").please:FireServer(targetPlatformID)
