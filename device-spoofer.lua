@@ -1,7 +1,4 @@
 targetPlatform = targetPlatform or "Windows"
-print('targetPlatform start')
-print(targetPlatform)
-print('targetPlatform end')
 
 local Players = game:GetService("Players")
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
@@ -17,13 +14,13 @@ local platforms = {
 }
 
 local targetPlatformID = platforms[targetPlatform]
-if not targetPlatformID then print(111) return end
+if not targetPlatformID then return end
 
 while Players.LocalPlayer == nil do
 	Players:GetPropertyChangedSignal('LocalPlayer'):wait()
 end
 
-if Players.LocalPlayer.Character then print(222) return end
+if Players.LocalPlayer.Character then return end
 
 Players.LocalPlayer:WaitForChild("PlayerScripts"):WaitForChild("Check").Disabled = true
 ReplicatedStorage:WaitForChild("DataTransfer").please:FireServer(targetPlatformID)
