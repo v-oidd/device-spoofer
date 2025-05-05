@@ -1,4 +1,7 @@
 targetPlatform = targetPlatform or "Windows"
+print('targetPlatform start')
+print(targetPlatform)
+print('targetPlatform end')
 
 local Players = game:GetService("Players")
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
