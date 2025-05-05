@@ -17,7 +17,7 @@ local targetPlatformID = platforms[targetPlatform]
 if not targetPlatformID then return end
 
 while Players.LocalPlayer == nil do
-	Players:GetPropertyChangedSignal('LocalPlayer'):wait()
+    Players:GetPropertyChangedSignal('LocalPlayer'):wait()
 end
 
 if Players.LocalPlayer.Character then return end
