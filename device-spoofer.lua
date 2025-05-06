@@ -23,4 +23,4 @@ end
 if Players.LocalPlayer.Character then return end
 
 Players.LocalPlayer:WaitForChild("PlayerScripts"):WaitForChild("Check").Disabled = true
-ReplicatedStorage:WaitForChild("DataTransfer").please:FireServer(targetPlatformID)
+ReplicatedStorage:WaitForChild("DTr").please:FireServer(targetPlatformID)
